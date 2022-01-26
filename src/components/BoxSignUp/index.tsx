@@ -1,4 +1,4 @@
-import { Container, Box, Text, Flex, Center, Input, Stack, InputGroup, InputRightElement, Button } from "@chakra-ui/react";
+import { Container, Box, Text, Flex, Center, Input, Stack, InputGroup, InputRightElement, Button, FormControl, FormLabel } from "@chakra-ui/react";
 import React, { useState } from "react";
 
 function BoxSignUp(props) {
@@ -11,8 +11,36 @@ function BoxSignUp(props) {
           <Text fontSize='3rem'>Sing Up</Text>
           <Text>Create your account right now</Text>
         </Center>
-        <Stack spacing='24px' w='80%' mt='24px'>
-          <Input placeholder="Full name" size='lg' variant='flushed' />
+        <FormControl isRequired id="full-name">
+          <FormLabel htmlFor='full-name'>Full name</FormLabel>
+          <Input type='text' placeholder="Full name" size='lg' variant='outline' />
+
+        </FormControl>
+        <FormControl isRequired id="email">
+          <FormLabel htmlFor='email'>Email</FormLabel>
+          <Input type='email' placeholder="Email" size='lg' variant='outline' />
+
+        </FormControl>
+        <FormControl isRequired id="username">
+          <FormLabel htmlFor='username'>Username</FormLabel>
+          <Input type='text' placeholder="Username" size='lg' variant='outline' />
+
+        </FormControl>
+        <FormControl isRequired id="password">
+          <FormLabel htmlFor='password'>Password</FormLabel>
+          <Input type='password' placeholder="Password" size='lg' variant='outline' />
+
+        </FormControl>
+        <FormControl isRequired id="repeat-password">
+          <FormLabel htmlFor='repeat-password'>Repeat password</FormLabel>
+          <Input type='password' placeholder="Repeat password" size='lg' variant='outline' />
+
+        </FormControl>
+
+        <Box p={4}>
+          <Button colorScheme="blue" width="100%">Entrar</Button>
+        </Box>
+        {/* <Stack spacing='24px' w='80%' mt='24px'>
           <Input placeholder="Username" size='lg' variant='flushed' />
           <Input placeholder="Email" size='lg' variant='flushed' />
           <InputGroup>
@@ -31,7 +59,7 @@ function BoxSignUp(props) {
               </Button>
             </InputRightElement>
           </InputGroup>
-        </Stack>
+        </Stack> */}
       </Flex>
     </Container>
   );
